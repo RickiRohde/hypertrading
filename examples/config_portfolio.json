@@ -1,0 +1,60 @@
+{
+  "benchmark_symbol": "SPY",
+  "strategy": {
+    "module": "trend",
+    "allow_long": true,
+    "allow_short": false,
+    "fast_ma": 20,
+    "slow_ma": 100,
+    "slope_window": 20,
+    "ma_kind": "ema",
+    "donchian_entry": 55,
+    "donchian_exit": 20,
+    "roc_window": 63,
+    "atr_window": 14,
+    "use_relative_strength": true,
+    "rs_window": 63,
+    "use_market_filter": true,
+    "market_ma": 200,
+    "er_trend_min": 0.30,
+    "vol_regime_max_pct": 0.90
+  },
+  "risk": {
+    "risk_per_trade": 0.005,
+    "target_vol_per_position": 0.0094,
+    "max_weight_per_symbol": 0.20,
+    "max_weight_per_sector": 0.40,
+    "max_gross_exposure": 1.0,
+    "max_positions": 10,
+    "atr_stop_mult": 3.0,
+    "atr_trail_mult": 5.0,
+    "max_holding_bars": 120,
+    "cooldown_bars": 3,
+    "max_portfolio_risk": 0.06,
+    "daily_loss_limit": 0.03,
+    "weekly_loss_limit": 0.07,
+    "max_total_drawdown": 0.25,
+    "max_correlation": 0.70,
+    "corr_window": 63,
+    "high_vol_size_scale": 0.5
+  },
+  "cost": {
+    "commission_bps": 1.0,
+    "half_spread_bps": 2.0,
+    "slippage_bps": 1.0,
+    "slippage_atr_frac": 0.05,
+    "impact_participation": 10.0
+  },
+  "liquidity": {
+    "min_price": 5.0,
+    "min_adv_usd": 5000000.0,
+    "max_participation": 0.10
+  },
+  "backtest": {
+    "initial_equity": 100000.0,
+    "exec_timing": "next_open",
+    "periods_per_year": 252,
+    "risk_free_rate": 0.02,
+    "seed": 7
+  }
+}

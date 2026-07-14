@@ -1,0 +1,9 @@
+# Kernebiblioteker til hypertrading-forskningsrammen.
+# Versionerne er nedre grænser; pin dem i et lockfile til produktion.
+numpy>=1.24
+pandas>=2.0
+scipy>=1.10
+
+# Valgfrit (kun til plotting/rapportering og eksempeldata):
+# matplotlib>=3.7
+# pyarrow>=12.0   # hurtig parquet I/O til store, punkt-i-tid datasæt
