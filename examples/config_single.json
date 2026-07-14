@@ -1,0 +1,50 @@
+{
+  "benchmark_symbol": "SPY",
+  "strategy": {
+    "module": "trend",
+    "allow_long": true,
+    "allow_short": false,
+    "fast_ma": 20,
+    "slow_ma": 100,
+    "slope_window": 20,
+    "ma_kind": "ema",
+    "donchian_entry": 55,
+    "donchian_exit": 20,
+    "rsi_window": 14,
+    "roc_window": 63,
+    "atr_window": 14,
+    "vol_window": 20,
+    "rvol_min": 1.0,
+    "use_relative_strength": true,
+    "rs_window": 63,
+    "use_market_filter": true,
+    "market_ma": 200,
+    "er_window": 20,
+    "er_trend_min": 0.30,
+    "vol_regime_max_pct": 0.90
+  },
+  "risk": {
+    "risk_per_trade": 0.005,
+    "max_weight_per_symbol": 1.0,
+    "max_positions": 1,
+    "atr_stop_mult": 3.0,
+    "atr_trail_mult": 5.0,
+    "max_holding_bars": 120,
+    "cooldown_bars": 3,
+    "max_total_drawdown": 0.25
+  },
+  "cost": {
+    "commission_bps": 1.0,
+    "half_spread_bps": 2.0,
+    "slippage_bps": 1.0,
+    "slippage_atr_frac": 0.05,
+    "impact_participation": 10.0
+  },
+  "backtest": {
+    "initial_equity": 100000.0,
+    "exec_timing": "next_open",
+    "periods_per_year": 252,
+    "risk_free_rate": 0.02,
+    "seed": 7
+  }
+}
